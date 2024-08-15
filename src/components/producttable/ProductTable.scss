@@ -1,0 +1,30 @@
+.productable{
+    .tablecontainer{
+        .tableCell{
+
+            .cellWrapper{
+                display: flex;
+                align-items: center;
+
+                .image{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 1px solid black;
+                }   
+            }
+
+            span{
+                font-size: 13px;
+                font-weight: 600;
+                border: 1px solid gray;
+                padding: 5px;
+                border-radius: 5px;
+                background-color: green;
+                cursor: pointer;
+            }
+
+        }
+    }
+}

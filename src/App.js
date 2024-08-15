@@ -5,7 +5,12 @@ import Customers from './pages/customers/Customers';
 import Product from './pages/product/Product';
 import New from './pages/new/New';
 import Single from './pages/single/Single';
-
+import Register from './pages/register/Register';
+import Login from './pages/login/Login';
+import { userInputs, productInputs } from './formData';
+import { useContext } from 'react';
+import { DarkModeContext } from './context/darkModeContext';
+import './style/dark.scss';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +27,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/product/:productId/new",
-    element: <New/>
+    element: <New inputs = {productInputs} title = {"Add New Product"}/>
+  },
+  {
+    path: "/customers/:customersId/new",
+    element: <New inputs = {userInputs} title = {"Add New User"}/>
   },
   {
     path: "/customers/:customerId",
@@ -33,27 +42,20 @@ const router = createBrowserRouter([
     element: <Single/>
   },
   {
-    path: "/",
-    element: <Home/>
+    path: "/register",
+    element: <Register/>
   },
   {
-    path: "/",
-    element: <Home/>
-  },
-  {
-    path: "/",
-    element: <Home/>
-  },
-  {
-    path: "/",
-    element: <Home/>
+    path: "/login",
+    element: <Login/>
   },
 ]);
 
 
 function App() {
+  const {darkMode} = useContext(DarkModeContext);
   return (
-    <div className="App">
+    <div className={darkMode? "App dark": "App"}>
       <RouterProvider router = {router} />
     </div>
   );

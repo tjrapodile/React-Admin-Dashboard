@@ -1,0 +1,106 @@
+.datatable{
+    height: 530px;
+    width: 100%;
+
+    .cellWithImg{
+        display: flex;
+        align-items: center;
+
+        .cellImg{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+    }
+    
+    .datatableTitle{
+        width: 100%;
+        font-size: 24px;
+        color: gray;
+        margin-bottom: 10px;
+        display: flex;
+        margin: 3px;
+        align-items: center;
+        justify-content: space-between;
+
+        .link{
+            color: green;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid green;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 20px;
+            cursor: pointer;
+
+            &:hover{
+                color: white;
+                background-color: green;
+            }
+        }
+
+    }
+
+    .datagrid{
+        padding: 5px;
+        margin: 10px;
+        border: none;
+
+        .cellWithStatus{
+            padding: 5px;
+
+            &.active{
+                background-color: rgba(0, 128, 0, 0.151);
+                color: green;
+            }
+
+            &.pending{
+                background-color: rgba(189, 189, 3, 0.103);
+                color: goldenrod;
+            }
+
+            &.passive{
+                background-color: rgba(255, 0, 0, 0.151);
+                color: crimson;
+            }
+        }
+        
+    }
+
+    .cellAction {
+        display: flex; /* Use flexbox to align items horizontally */
+        flex-direction: row;
+        gap: 10px;
+        align-items: center; 
+
+        .viewButton {
+            padding: 2px 5px;
+            color: darkblue;
+            border: 1px dotted rgba(0, 0, 139, 0.596);
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: darkblue;
+            }
+        }
+
+        .deleteButton {
+            padding: 2px 5px;
+            color: crimson;
+            border: 1px dotted rgba(220, 20, 60, 0.6);
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: crimson;
+            }
+        }
+      }
+      
+
+}
+

@@ -1,0 +1,9 @@
+.customers{
+    display: flex;
+    width: 100%;
+    color: grey;
+
+    .customersContainer{
+        flex: 6;
+    }
+}
